@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-import digikala
+import filimo
 
 app = Flask(__name__)
 
@@ -24,7 +24,7 @@ def submit():
 
 
     for i in urls:
-         instance = digikala.data_collector(i) 
+         instance = filimo.Filimo(i) 
      
     # Redirect to a success page or render a template with the URLs
     return render_template('result_page.html', urls=urls)
