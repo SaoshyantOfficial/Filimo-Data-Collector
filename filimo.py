@@ -83,6 +83,9 @@ class Filimo():
             print(f"last item : {last_index}")
             last_index += 1
 
+        # Closing driver
+        driver.quit()
+
 
 # Load links to gather their data
 with open("links.json", "r") as f:
