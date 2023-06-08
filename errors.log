@@ -1,0 +1,30 @@
+occurred date & time: 2023-06-08 07:31:40 ERROR    
+file name: dataset_collector.py
+line number: 67 
+error: Message: Unable to locate element: .loadmore-link
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:182:5
+NoSuchElementError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:394:5
+element.find/</<@chrome://remote/content/marionette/element.sys.mjs:134:16
+
+occurred date & time: 2023-06-08 07:31:57 ERROR    
+file name: dataset_collector.py
+line number: 67 
+error: Message: Unable to locate element: .loadmore-link
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:182:5
+NoSuchElementError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:394:5
+element.find/</<@chrome://remote/content/marionette/element.sys.mjs:134:16
+
+occurred date & time: 2023-06-08 07:32:02 ERROR    
+file name: dataset_collector.py
+line number: 67 
+error: Message: Unable to locate element: .loadmore-link
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:182:5
+NoSuchElementError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:394:5
+element.find/</<@chrome://remote/content/marionette/element.sys.mjs:134:16
+

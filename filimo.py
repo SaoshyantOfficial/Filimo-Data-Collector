@@ -1,17 +1,27 @@
 """Web scraper to collect filimo.com reviews"""
+"Saoshyant"
 
 #import statements
+import pandas as pd
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.common.exceptions import NoSuchElementException
 import time
+import pandas as pd
+import json
+import logging
 
+# Log options to handle errors
+logging.basicConfig(filename='errors.log', filemode="w", format='occurred date & time: %(asctime)s %(levelname)-8s \nfile name: %(filename)s\nline number: %(lineno)d \nerror: %(message)s',
+     level=logging.ERROR, datefmt='%Y-%m-%d %H:%M:%S')
 
 class Filimo():
 
-    def __init__(self, movie_link):
-        self.movie_link = movie_link
+    def __init__(self, movie_links):
+        self.movie_links = movie_links
+        self.reviews_df = pd.DataFrame()
 
 
     def driver_options(self):
@@ -20,41 +30,63 @@ class Filimo():
         options = webdriver.FirefoxOptions()
         options.add_argument('--headless')
         driver = webdriver.Firefox()
+        # Set 15 seconds for page loading
+        driver.set_page_load_timeout(15)
+
         return driver
     
     def review_collector(self):
-        
+        # Due to any unwanted error, in each loop the data frame is saved and loop's(which is the index of the-
+        # last item in the list that it's data has been collected) number will be shown;
+        # So if any error occurs during scraping, all the gathered data wont be lost and user can continue from-
+        # Where it has been stopped.
+
         # driver oprion
         driver = self.driver_options()
-        # Set 10 second for page loading
-        driver.set_page_load_timeout(15)
-
-        # Get target page
-        driver.get(self.movie_link)
 
         # Wait settings
         wait = WebDriverWait(driver, 10)
 
-        # click on show more to see all comments
-        try:
+        # Index of the lst item in the list that it's data has been collected
+        last_index = 0
+        for link in self.movie_links:
+
+            # Get target page
+            driver.get(link)
+
             while True:
-                show_more_btn = wait.until(EC.presence_of_element_located((By.CLASS_NAME, "loadmore-link")))
-                # scroll to the element using JavaScript
-                driver.execute_script("arguments[0].scrollIntoView({ behavior: 'auto', block: 'center', inline: 'center' });", show_more_btn)
-                show_more_btn.click()
-                time.sleep(0.5)
+                try:
+                    # click on show more to see all comments
+                    show_more_btn = driver.find_element(By.CLASS_NAME, "loadmore-link")
+                    # scroll to the element using JavaScript
+                    driver.execute_script("arguments[0].scrollIntoView({ behavior: 'auto', block: 'center', inline: 'center' });", show_more_btn)
+                    show_more_btn.click()
+                    time.sleep(0.5)
 
-        except Exception as e:
-            print(e)
-            pass
-
-        # comment links
-        comments = wait.until(EC.presence_of_all_elements_located((By.CLASS_NAME, "comment-content")))
-        
-        # Comment texts
-        for comment in comments:
-            print(comment.text)
+                except Exception as e:
+                    logging.error(e)
+                    break
 
 
-instance = Filimo("https://www.filimo.com/m/121775")
+            # comment links
+            comments = wait.until(EC.presence_of_all_elements_located((By.CLASS_NAME, "comment-content")))
+            
+            # Comment texts
+            comments_list = list()
+            for comment in comments:
+                comments_list.append(comment.text)
+            
+            # Creating data frame
+            reviews_df = pd.DataFrame(comments_list)
+            self.reviews_df = pd.concat([self.reviews_df, reviews_df])
+            self.reviews_df.to_csv("filimo_reviews.csv", index=False)
+            print(f"last item : {last_index}")
+            last_index += 1
+
+
+# Load links to gather their data
+with open("links.json", "r") as f:
+    links = json.load(f)
+
+instance = Filimo(links)
 instance.review_collector()
