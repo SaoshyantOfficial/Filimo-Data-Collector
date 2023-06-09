@@ -46,7 +46,7 @@ Inline code `run the code in terminal` <br>
  open your browser and type this address
  
      http://127.0.0.1:5000/
-![code_running]()
+![code_running](https://github.com/SaoshyantOfficial/Filimo-Data-Collector/blob/master/screenshots/Screenshot_20230609_181126.png)
 ### add urls
 go to your considered fil page in filimo.com website and copy this main url <br>
 Once you have added all the desired urls, click on the scrap option <br>
@@ -57,7 +57,7 @@ Once you have added all the desired urls, click on the scrap option <br>
 Web scraping strats to extract all opinions about your considered product <br>
 
 ### download opinions file
-all opinions about your choosen product are extracted and you can download them in a ad `.csv` file from result page
+all opinions about your choosen product are extracted and you can download them in a ad `.csv` file from result page <br>
 ![download_gif](https://github.com/SaoshyantOfficial/Filimo-Data-Collector/blob/master/screenshots/filimo_download.gif)
 *** 
 
