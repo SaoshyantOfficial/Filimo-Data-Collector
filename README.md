@@ -3,9 +3,9 @@
 ## This is an open source tool for data collection
 
 The goal of this project is to create a tool for easier data collection. <br>
-The data collected with this tool includes user opinions about films. <br>
-This tool is very useful for data scientists. <br>
-Instructions for using this tool are explained below in gettinh started section. <br>
+This data collector, collect reviews of different movies from filimo site. <br>
+This tool can be useful for data scientists and other researchers. <br>
+Instructions for using this tool are explained below in getting started section. <br>
 
 ***
 
@@ -48,22 +48,22 @@ Inline code `run the code in terminal` <br>
      http://127.0.0.1:5000/
 ![code_running](https://github.com/SaoshyantOfficial/Filimo-Data-Collector/blob/master/screenshots/Screenshot_20230609_181126.png)
 ### add urls
-go to your considered fil page in filimo.com website and copy this main url <br>
-Once you have added all the desired urls, click on the scrap option <br>
+go to your considered movie page in filimo.com website and copy the url of that movie <br>
+Once you added all the desired urls, click on the scrap button <br>
 
 ![add_urls](https://github.com/SaoshyantOfficial/Filimo-Data-Collector/blob/master/screenshots/Screenshot_20230608_161526.png)
 
 ### Web scraping
-Web scraping strats to extract all opinions about your considered product <br>
+Web scraping starts to extract all reviews about your considered products <br>
 
 ### download opinions file
-all opinions about your choosen product are extracted and you can download them in a ad `.csv` file from result page <br>
+all reviews about your choosen products are extracted and you can download them in a ad `.csv` file from result page <br>
 ![download_gif](https://github.com/SaoshyantOfficial/Filimo-Data-Collector/blob/master/screenshots/filimo_download.gif)
 *** 
 
 ## Goals
 
-It is an open source tool and is made available to all interested people so that they can do their own research or projects with the help of this tool faster and more easily. <br>
+It is an open source tool and is available for all interested people so they can do their own research or projects with the help of this tool faster and easier. <br>
 The use of this tool is free and open, and also developers can upgrade this tool. <br>
 Hoping to influence the progress of the data scientist community. <br>
 Enjoy using this tool <br>
@@ -71,6 +71,6 @@ Enjoy using this tool <br>
 
 **Saoshyant Team** <br>
 
-**The first relesase in Spring 2023** <br>
+**The first release in Spring 2023** <br>
 
 
