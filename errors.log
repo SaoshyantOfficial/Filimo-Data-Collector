@@ -1,8 +1,52 @@
-occurred date & time: 2023-06-12 09:06:19 WARNING  
+occurred date & time: 2023-06-12 09:12:20 WARNING  
 file name: _internal.py
 line number: 224 
 error:  * Debugger is active!
-occurred date & time: 2023-06-12 09:06:19 INFO     
+occurred date & time: 2023-06-12 09:12:20 INFO     
 file name: _internal.py
 line number: 224 
-error:  * Debugger PIN: 977-748-400
+error:  * Debugger PIN: 326-292-595
+occurred date & time: 2023-06-12 09:12:26 INFO     
+file name: _internal.py
+line number: 224 
+error: 127.0.0.1 - - [12/Jun/2023 09:12:26] "GET / HTTP/1.1" 200 -
+occurred date & time: 2023-06-12 09:12:26 INFO     
+file name: _internal.py
+line number: 224 
+error: 127.0.0.1 - - [12/Jun/2023 09:12:26] "[36mGET /static/js/input_page.js HTTP/1.1[0m" 304 -
+occurred date & time: 2023-06-12 09:12:26 INFO     
+file name: _internal.py
+line number: 224 
+error: 127.0.0.1 - - [12/Jun/2023 09:12:26] "[36mGET /static/input_page.css HTTP/1.1[0m" 304 -
+occurred date & time: 2023-06-12 09:12:26 INFO     
+file name: _internal.py
+line number: 224 
+error: 127.0.0.1 - - [12/Jun/2023 09:12:26] "[36mGET /static/scrap.gif HTTP/1.1[0m" 304 -
+occurred date & time: 2023-06-12 09:12:26 INFO     
+file name: _internal.py
+line number: 224 
+error: 127.0.0.1 - - [12/Jun/2023 09:12:26] "[36mGET /static/filimo_logo.png HTTP/1.1[0m" 304 -
+occurred date & time: 2023-06-12 09:12:42 INFO     
+file name: _internal.py
+line number: 224 
+error: 127.0.0.1 - - [12/Jun/2023 09:12:42] "POST /submit HTTP/1.1" 200 -
+occurred date & time: 2023-06-12 09:12:42 INFO     
+file name: _internal.py
+line number: 224 
+error: 127.0.0.1 - - [12/Jun/2023 09:12:42] "[36mGET /static/result_page.css HTTP/1.1[0m" 304 -
+occurred date & time: 2023-06-12 09:12:42 INFO     
+file name: _internal.py
+line number: 224 
+error: 127.0.0.1 - - [12/Jun/2023 09:12:42] "[36mGET /static/Download.gif HTTP/1.1[0m" 304 -
+occurred date & time: 2023-06-12 09:12:42 INFO     
+file name: _internal.py
+line number: 224 
+error: 127.0.0.1 - - [12/Jun/2023 09:12:42] "[36mGET /static/filimo_logo.png HTTP/1.1[0m" 304 -
+occurred date & time: 2023-06-12 09:13:01 INFO     
+file name: _internal.py
+line number: 224 
+error: 127.0.0.1 - - [12/Jun/2023 09:13:01] "[33mGET /reviews.csv HTTP/1.1[0m" 404 -
+occurred date & time: 2023-06-12 09:13:06 INFO     
+file name: _internal.py
+line number: 224 
+error: 127.0.0.1 - - [12/Jun/2023 09:13:06] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
